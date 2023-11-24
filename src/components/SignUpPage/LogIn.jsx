@@ -1,20 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import signup2 from '../../assets/images/undraw_fingerprint_login_re_t71l.svg';
 import SocialLogin from "./Sociallogin";
 
 const LogIn = () => {
+    const {logInUser} = useContext(AuthContext);
+    
 
     const handleSubmit = event =>{
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
         const email = form.email.value;
-        const photo = form.photo.value;
         const password =form.password.value;
+    
 
-        const user ={name, email,photo,password}
-
-        console.log(user)
+        // console.log(user)
+        // user LogIn
+        logInUser(email,password)
+        .then(result =>{
+            const user = result.user;
+            console.log('logged', user);
+            alert('User login successfully')
+            form.reset();
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
     }
 
     return (
@@ -38,7 +50,7 @@ const LogIn = () => {
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button type="submit" className="btn btn-primary">Login</button>
         </div>
       </form>
       <p className="font-semibold text-center">New to this site?  <Link to='/register' className="text-primary font-bold">Register</Link></p>

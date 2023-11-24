@@ -1,9 +1,14 @@
 import signup2 from '../../assets/images/undraw_fingerprint_login_re_t71l.svg';
 
+import { updateProfile } from 'firebase/auth';
+import { useContext } from 'react';
 import { Link } from "react-router-dom";
+import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 import SocialLogin from "./Sociallogin";
 
 const Register = () => {
+
+    const {createUser} = useContext(AuthContext);
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -13,9 +18,30 @@ const Register = () => {
         const photo = form.photo.value;
         const password =form.password.value;
 
-        const user ={name, email,photo,password}
+        // const user ={name, email,photo,password};
 
-        console.log(user)
+        // createUser
+        createUser(email, password)
+        .then(result =>{
+            const user = result.user;
+            console.log('create user', user);
+            // update user
+            updateProfile(user, {
+                 displayName: name,
+                 photoURL: photo
+            })
+            .then(() => {
+               alert('user created successfully');
+               form.reset();
+              }).catch((error) => {
+                // An error occurred
+               console.log(error.message)
+              });
+              
+        })
+        .catch(error =>{
+            console.log(error)
+        })
     }
 
 
@@ -52,7 +78,7 @@ const Register = () => {
              <input type="password" name="password" placeholder="password" className="input input-bordered" required />
            </div>
            <div className="form-control mt-6">
-             <button className="btn btn-primary">Register</button>
+             <button type='submit' className="btn btn-primary">Register</button>
            </div>
          </form>
          <p className="font-semibold text-center">Already Have An Account please <Link to='/login' className="text-primary font-bold">Login</Link></p>

@@ -1,7 +1,20 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 
 
 const NavBar = () => {
+    const {user, logOut} = useContext(AuthContext);
+
+    const handleLogOut =()=>{
+        logOut()
+        .then(()=>{
+            alert('LogOut Successfully')
+        })
+        .catch(error =>{
+            console.log(error.message)
+        })
+    }
 
     const menuList = <> 
         <li>
@@ -51,10 +64,21 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <div>
-        <Link to='/login'><button className="btn btn-outline border-b-4 btn-primary">LogIn</button></Link>
+        {
+         user
+             ?
+              <div className="md:flex items-center">
+              <button onClick={handleLogOut} className="btn btn-secondary btn-sm">LogOut</button>
+              <div className="avatar ml-4">
+              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+               <Link to='/my-profile'> <img src={user.photoURL} /></Link>
+              </div>
+            </div>
+              </div> : 
+         <div>
+        <Link to='/login'><button className="btn btn-outline  border-b-4 btn-primary">LogIn</button></Link>
         <Link to='/register'><button className="btn btn-outline border-b-4 btn-secondary ml-3">Register</button></Link>
-          </div>
+          </div>}
         </div>
       </div>
         </section>

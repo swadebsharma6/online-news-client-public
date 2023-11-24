@@ -3,6 +3,7 @@ import Main from "../../LayOut/Main/Main";
 import AddArticle from "../../Pages/AddArticle/AddArticle";
 import AllArticle from "../../Pages/AllArticle/AllArticle";
 import Home from "../../Pages/Home/Home/Home/Home";
+import MyProfile from "../../Pages/MyProfile/MyProfile";
 import LogIn from "../SignUpPage/LogIn";
 import Register from "../SignUpPage/Register";
 
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         {
             path: '/login',
             element:<LogIn></LogIn>
+        },
+        {
+            path: '/my-profile',
+            element: <MyProfile></MyProfile>
         }
       ]
     },

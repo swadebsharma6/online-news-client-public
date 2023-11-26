@@ -1,0 +1,137 @@
+[
+  {
+    "category": "world",
+    "headline": "Global Leaders Gather for Climate Summit",
+    "source": "CNN",
+    "date": "2023-11-25",
+    "summary": "Leaders from various countries convene to discuss climate change and emissions reduction.",
+    "image": "https://i.ibb.co/H7MMRjw/leader.jpg",
+    "details": "The summit aimed to address pressing issues related to climate change and to seek collaborative solutions among nations to reduce carbon emissions. Key topics included renewable energy adoption and strategies for mitigating the impact of climate change on vulnerable regions."
+  },
+  {
+    "category": "world",
+    "headline": "Conflict Escalates in Region X",
+    "source": "BBC",
+    "date": "2023-11-24",
+    "summary": "Tensions rise as conflicts intensify in Region X with implications for neighboring countries.",
+    "image": "https://i.ibb.co/xCSnxh7/manny-becerra-r-Yab-V2-VOy-Ys-unsplash.jpg",
+    "details": "The escalating conflict in Region X has raised concerns among neighboring nations due to its potential spillover effects. Efforts for diplomatic resolution are underway, but the situation remains tense."
+  },
+  {
+    "category": "world",
+    "headline": "Conflict Escalates in Region X",
+    "source": "BBC",
+    "date": "2023-11-24",
+    "summary": "Tensions rise as conflicts intensify in Region X with implications for neighboring countries.",
+    "image": "https://i.ibb.co/WWhJ6fL/tristan-sosteric-Tg-B0-K46l-H-0-unsplash.jpg",
+    "details": "The escalating conflict in Region X has raised concerns among neighboring nations due to its potential spillover effects. Efforts for diplomatic resolution are underway, but the situation remains tense."
+  },
+  {
+    "category": "lifestyle",
+    "headline": "New Trends in Sustainable Fashion",
+    "source": "Vogue",
+    "date": "2023-11-23",
+    "summary": "Fashion industry adopts more sustainable practices, influencing consumer choices.",
+    "image": "https://i.ibb.co/n1Y2Zpk/cesar-la-rosa-Hb-Addptme1-Q-unsplash.jpg",
+    "details": "The fashion industry is embracing sustainability, with major brands adopting eco-friendly materials and ethical production methods. Consumers are increasingly demanding sustainability, prompting a shift in the industry's practices."
+  },
+  {
+    "category": "lifestyle",
+    "headline": "Healthy Eating Habits for Busy Professionals",
+    "source": "Healthline",
+    "date": "2023-11-22",
+    "summary": "Tips on maintaining a healthy diet despite a hectic lifestyle.",
+    "image": "https://i.ibb.co/yQ978BW/blubel-ffmk-D8dm7-Zw-unsplash.jpg",
+    "details": "Busy professionals often struggle to maintain a balanced diet. This article provides practical tips and meal plans for maintaining health despite a demanding schedule."
+  },
+  {
+    "category": "lifestyle",
+    "headline": "Healthy Eating Habits for Busy Professionals",
+    "source": "Healthline",
+    "date": "2023-11-22",
+    "summary": "Tips on maintaining a healthy diet despite a hectic lifestyle.",
+    "image": "https://i.ibb.co/qnn3SwM/freestocks-3-Q3ts-J01nc-unsplash.jpg",
+    "details": "Busy professionals often struggle to maintain a balanced diet. This article provides practical tips and meal plans for maintaining health despite a demanding schedule."
+  },
+  {
+    "category": "health",
+    "headline": "Breakthrough in Cancer Research",
+    "source": "New York Times",
+    "date": "2023-11-21",
+    "summary": "Scientists make significant progress toward a potential cure for a specific type of cancer.",
+    "image": "https://i.ibb.co/PTmQWmG/piron-guillaume-y5h-QCIn1c6o-unsplash.jpg",
+    "details": "Researchers have made a breakthrough in understanding a specific type of cancer, potentially paving the way for more effective treatments. Clinical trials are showing promising results."
+  },
+  {
+    "category": "health",
+    "headline": "Breakthrough in Cancer Research",
+    "source": "New York Times",
+    "date": "2023-11-21",
+    "summary": "Scientists make significant progress toward a potential cure for a specific type of cancer.",
+    "image": "https://i.ibb.co/6yCQDJ2/gabin-vallet-qq-w-Ri-GXf7o-unsplash.jpg",
+    "details": "Researchers have made a breakthrough in understanding a specific type of cancer, potentially paving the way for more effective treatments. Clinical trials are showing promising results."
+  },
+  {
+    "category": "health",
+    "headline": "Mental Health Awareness Campaign Launched",
+    "source": "The Guardian",
+    "date": "2023-11-20",
+    "summary": "Initiative aims to raise awareness and reduce stigma around mental health issues.",
+    "image": "https://i.ibb.co/yq9d9C0/francisco-venancio-M4-Xloxsg0-Gw-unsplash.jpg",
+    "details": "An initiative to raise awareness about mental health issues has been launched, aiming to reduce stigma and encourage open conversations about mental well-being."
+  },
+  {
+    "category": "business",
+    "headline": "Tech Giants Report Record Profits",
+    "source": "Financial Times",
+    "date": "2023-11-19",
+    "summary": "Major tech companies announce unprecedented profits for the quarter.",
+    "image": "https://i.ibb.co/r6qSSBC/desola-lanre-ologun-Ig-UR1i-X0mq-M-unsplash.jpg",
+    "details": "Tech giants have exceeded profit expectations, attributing their success to strong sales in key markets and innovative product launches."
+  },
+  {
+    "category": "business",
+    "headline": "Global Markets React to Economic Forecast",
+    "source": "Bloomberg",
+    "date": "2023-11-18",
+    "summary": "Stock markets respond to the latest economic predictions, showing mixed trends.",
+    "image": "https://i.ibb.co/4VwC8GT/dai-ke-Gkra-Tr-CYA-0-unsplash.jpg",
+    "details": "Recent economic forecasts have led to varied reactions in global stock markets, with investors assessing the implications for different industries."
+  },
+  {
+    "category": "business",
+    "headline": "Global Markets React to Economic Forecast",
+    "source": "Bloomberg",
+    "date": "2023-11-18",
+    "summary": "Stock markets respond to the latest economic predictions, showing mixed trends.",
+    "image": "https://i.ibb.co/BcgPQXv/desola-lanre-ologun-kwz-Wj-Tn-DPLk-unsplash.jpg",
+    "details": "Recent economic forecasts have led to varied reactions in global stock markets, with investors assessing the implications for different industries."
+  },
+  {
+    "category": "education",
+    "headline": "Education Reforms Proposed in Parliament",
+    "source": "The Washington Post",
+    "date": "2023-11-17",
+    "summary": "Government introduces plans for educational reforms aimed at improving student outcomes.",
+    "image": "https://i.ibb.co/XsYqmYx/kenny-eliason-z-FSo6bn-ZJTw-unsplash.jpg",
+    "details": "Proposed educational reforms aim to address current shortcomings in the education system, focusing on improving learning outcomes and access to quality education for all students."
+  },
+  {
+    "category": "education",
+    "headline": "Education Reforms Proposed in Parliament",
+    "source": "The Washington Post",
+    "date": "2023-11-17",
+    "summary": "Government introduces plans for educational reforms aimed at improving student outcomes.",
+    "image": "https://i.ibb.co/pLXvC31/santi-vedri-O5-EMzfdxedg-unsplash.jpg",
+    "details": "Proposed educational reforms aim to address current shortcomings in the education system, focusing on improving learning outcomes and access to quality education for all students."
+  },
+  {
+    "category": "education",
+    "headline": "Rise in Online Learning Platforms",
+    "source": "TechCrunch",
+    "date": "2023-11-16",
+    "summary": "Online education platforms see a surge in users amid the ongoing shift in learning methods.",
+    "image": "https://i.ibb.co/rZcN1dF/ismail-salad-osman-hajji-dirir-v7-FT5ng-IEf-A-unsplash.jpg",
+    "details": "Online learning platforms are experiencing a surge in user engagement as more people opt for flexible and accessible learning methods."
+  }
+]

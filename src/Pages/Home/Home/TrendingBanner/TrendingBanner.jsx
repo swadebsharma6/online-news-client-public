@@ -18,7 +18,7 @@ const TrendingBanner = () => {
 
     }, []);
 
-    console.log(trendingArticles)
+    // console.log(trendingArticles)
  
     return (
         <section className="mb-10">

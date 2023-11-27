@@ -1,6 +1,8 @@
 // import newsImg from '../../assets/images/Banner/printer.jpg';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import Title from '../../components/Shared/SectionTitle/Title';
+import useAuth from '../../hooks/useAuth';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
@@ -9,8 +11,11 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const AddArticle = () => {
   const { register, handleSubmit, reset } = useForm();
   const axiosPublic = useAxiosPublic();
+ const {user} = useAuth();
+
+
   const onSubmit = async(data) => {
-    console.log(data)
+    console.log(data, user)
     // image upload
     const imgFile = {image: data.image[0]}
 
@@ -23,19 +28,28 @@ const AddArticle = () => {
     if(res.data.success){
       // send article to server 
       const article ={
+        author: user.displayName,
+        email: user.email,
+        photo: user.photoUrl,
         title: data.title,
         publisher: data.publisher,
         tags: data.tags,
         description: data.description,
         image: res.data.data.display_url
       }
-       // ToDO: send article to server with axios secure only admin
+
+       // ToDO: send article to server with axios secure only admin;
        const articleRes = await axiosPublic.post('/articles', article);
        console.log(articleRes.data);
        if(articleRes.data.insertedId){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Added Article Successfully",
+          showConfirmButton: false,
+          timer: 1500
+        });
         reset();
-        // show a tost
-        alert('Added Article Successfully')
        }
     }
 

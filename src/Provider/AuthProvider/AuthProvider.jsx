@@ -6,7 +6,7 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
 
-    const[user, setUser] = useState('');
+    const[user, setUser] = useState(null);
     const[loading, setLoading] = useState(true);
 
     // create user
@@ -23,21 +23,22 @@ const AuthProvider = ({children}) => {
 
     // logOut user
     const logOut =()=>{
-        return signOut(auth)
+        setLoading(true);
+        return signOut(auth);
     }
 
 
     // observer
     useEffect(()=>{
-    const unAuthorized =  onAuthStateChanged(auth, currentUser =>{
+    const unSubscribe =  onAuthStateChanged(auth, currentUser =>{
             console.log('observer', currentUser);
             setUser(currentUser);
             setLoading(false);
         });
         return ()=>{
-            unAuthorized();
+            unSubscribe();
         }
-    }, [])
+    }, []);
 
     const authInfo ={
         user,

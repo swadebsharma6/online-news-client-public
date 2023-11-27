@@ -5,11 +5,7 @@ const Plans = () => {
   return (
     <section className="mb-16 bg-blue-800 bg-opacity-30 pb-8">
       <SectionTitle img={bgImage} title={"Get Every Monthly Updates"}></SectionTitle>
-      <div className="text-center mb-5 w-1/2 mx-auto">
-        <h2 className="text-2xl font-bold">Newsers</h2>
-        <p className="text-xl">Freemium is a business model in which a company offers basic or limited features to users at no cost and then charges a premium for supplemental or advanced </p>  
-      </div>
-      <div className=" md:max-w-5xl mx-auto md:grid grid-cols-3 gap-4">
+      <div className=" md:max-w-5xl mx-auto md:grid grid-cols-3 gap-10">
          <div>
          <div className="relative flex w-full md:max-w-[20rem] flex-col rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border p-8 text-white shadow-md shadow-pink-500/40">
       <div className="relative pb-8 m-0 mb-8 overflow-hidden text-center text-gray-700 bg-transparent border-b rounded-none shadow-none border-white/10 bg-clip-border">

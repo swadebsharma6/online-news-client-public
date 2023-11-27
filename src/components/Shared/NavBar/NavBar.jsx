@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
 
 
@@ -9,10 +10,16 @@ const NavBar = () => {
     const handleLogOut =()=>{
         logOut()
         .then(()=>{
-            alert('LogOut Successfully')
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: "Logout Successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
         })
         .catch(error =>{
-            console.log(error.message)
+            console.log(error.message);
         })
     }
 
@@ -27,6 +34,14 @@ const NavBar = () => {
         </NavLink></li>
         <li>
         <NavLink
+          to="/allArticle"
+          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
+          }
+        >
+         All Article
+        </NavLink></li>
+        <li>
+        <NavLink
           to="/addArticle"
           className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
           }
@@ -35,18 +50,42 @@ const NavBar = () => {
         </NavLink></li>
         <li>
         <NavLink
-          to="/allArticle"
+          to="/subscription"
           className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
           }
         >
-         All Article
+         Subscription
+        </NavLink></li>
+        <li>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
+          }
+        >
+         DashBoard
+        </NavLink></li>
+        <li>
+        <NavLink
+          to="/myArticle"
+          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
+          }
+        >
+         My Article
+        </NavLink></li>
+        <li>
+        <NavLink
+          to="/premiumArticle"
+          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
+          }
+        >
+         Premium Article
         </NavLink></li>
     
     </>
 
     return (
         <section>
-        <div className="navbar bg-base-300 px-4">
+        <div className="navbar  bg-base-300 px-4 py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

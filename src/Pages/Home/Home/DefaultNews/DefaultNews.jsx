@@ -16,6 +16,7 @@ const DefaultNews = () => {
         
     }, []);
 
+
  const world = news.filter(item => item.category === 'world');
  const lifestyle = news.filter(item => item.category === 'lifestyle');
  const health = news.filter(item => item.category === 'health');

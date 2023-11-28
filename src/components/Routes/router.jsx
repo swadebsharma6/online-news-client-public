@@ -1,9 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashBoard from "../../LayOut/DashBoard/DashBoard";
 import Main from "../../LayOut/Main/Main";
 import AddArticle from "../../Pages/AddArticle/AddArticle";
 import AllArticle from "../../Pages/AllArticle/AllArticle";
 import Details from "../../Pages/AllArticle/Details";
-import DashBoard from "../../Pages/DashBoard/DashBoard";
+import Contact from "../../Pages/Contact/Contact";
+import AllUsers from "../../Pages/DashBoard/components/AllUsers/AllUsers";
+import Articles from "../../Pages/DashBoard/components/Articles/Articles";
+import AddPublisher from "../../Pages/DashBoard/components/Publisher/AddPublisher";
+import DashBoardPage from "../../Pages/DashBoardPage/DashBoardPage";
 import Error from "../../Pages/ErrorPage/Error";
 import Home from "../../Pages/Home/Home/Home/Home";
 import MyProfile from "../../Pages/MyProfile/MyProfile";
@@ -37,10 +42,6 @@ export const router = createBrowserRouter([
             loader: ({params}) => fetch(`http://localhost:5000/articles/${params.id}`)
         },
         {
-            path: '/dashboard',
-            element: <PrivetRoute><DashBoard></DashBoard></PrivetRoute>
-        },
-        {
             path: '/register',
             element: <Register></Register>
         },
@@ -49,11 +50,37 @@ export const router = createBrowserRouter([
             element:<LogIn></LogIn>
         },
         {
+            path: '/contact',
+            element: <Contact></Contact>
+        },
+        {
             path: '/my-profile',
             element: <MyProfile></MyProfile>,
             loader: ()=> fetch(`http://localhost:5000/articles`)
         }
       ],
       errorElement: <Error></Error>
+    },
+    {
+        path: 'dashboard',
+        element: <PrivetRoute><DashBoard></DashBoard></PrivetRoute>,
+        children: [
+            {
+                path: 'dashboard',
+                element: <DashBoardPage></DashBoardPage>
+            },
+            {
+                path: 'allUsers',
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: 'articles',
+                element: <Articles></Articles>
+            },
+            {
+                path: 'publisher',
+                element: <AddPublisher></AddPublisher>
+            }
+        ]
     },
   ]);

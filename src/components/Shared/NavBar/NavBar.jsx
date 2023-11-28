@@ -56,7 +56,8 @@ const NavBar = () => {
         >
          Subscription
         </NavLink></li>
-        <li>
+       {
+        user &&  <li>
         <NavLink
           to="/dashboard"
           className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
@@ -64,6 +65,7 @@ const NavBar = () => {
         >
          DashBoard
         </NavLink></li>
+       }
         <li>
         <NavLink
           to="/myArticle"

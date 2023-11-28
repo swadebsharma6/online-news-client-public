@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 import SocialLogin from "./Sociallogin";
 
 const Register = () => {
@@ -12,6 +13,7 @@ const Register = () => {
   const [success, setSuccess] = useState("");
   const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,16 +50,31 @@ const Register = () => {
           photoURL: photo,
         })
           .then(() => {
-            Swal.fire({
-              position: "top",
-              icon: "success",
-              title: "User Signup Successfully",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-            setSuccess("User Registered Successfully");
-            navigate('/login');
-            form.reset();
+            // send user data to backend
+            const user ={
+              name: name,
+              email:email,
+            }
+
+            axiosPublic.post('/users', user)
+            .then(res =>{
+              console.log('user added to database', res.data)
+              if(res.data.insertedId){
+                Swal.fire({
+                  position: "top",
+                  icon: "success",
+                  title: "User Signup Successfully",
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+                setSuccess("User Registered Successfully");
+                navigate('/login');
+                form.reset();
+              }
+            })
+
+
+            
           })
           .catch((error) => {
             // An error occurred

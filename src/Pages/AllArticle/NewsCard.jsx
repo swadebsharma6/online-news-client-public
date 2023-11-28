@@ -1,10 +1,34 @@
+
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
 const NewsCard = ({news}) => {
-    console.log(news)
-
+    // console.log(news)
+    const {user} = useAuth();
     const {_id, description, image, publisher, title,} = news;
+    const axiosSecure = useAxiosSecure();
+
+    const handleViewsCount =(news) =>{
+      if(user){
+        // TODO: send data to the dataBase
+        const view ={
+            newsId: _id,
+            name:user.displayName,
+            email: user.email,
+            image: news.image,
+            title: news.title,    
+        }
+        
+        axiosSecure.post('/views', view)
+       .then(res =>{
+        console.log(res.data)
+       })
+
+      }
+     
+    }
 
     return (
         <section>
@@ -15,7 +39,9 @@ const NewsCard = ({news}) => {
           <h2 className="card-title">{title}</h2>
           <h2 className="card-title uppercase">{publisher}</h2>
           {
-         description.length > 300 ? <p>{description.slice(0, 300)} <Link to={`/details/${_id}`} className='text-primary font-bold'>Read More...</Link> </p> 
+         description.length > 300 ? <p>{description.slice(0, 300)} <button onClick={()=> handleViewsCount(news)} className="btn btn-link">
+         <Link to={`/details/${_id}`} className='text-primary font-bold'>Read More...</Link>
+         </button> </p> 
             : <p>{description}</p>
           }
           

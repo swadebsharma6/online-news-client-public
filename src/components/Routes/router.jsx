@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../LayOut/Main/Main";
 import AddArticle from "../../Pages/AddArticle/AddArticle";
 import AllArticle from "../../Pages/AllArticle/AllArticle";
+import Details from "../../Pages/AllArticle/Details";
 import DashBoard from "../../Pages/DashBoard/DashBoard";
 import Error from "../../Pages/ErrorPage/Error";
 import Home from "../../Pages/Home/Home/Home/Home";
@@ -27,7 +28,13 @@ export const router = createBrowserRouter([
         },
         {
             path: '/allArticle',
-            element: <AllArticle></AllArticle>
+            element: <AllArticle></AllArticle>,
+            loader: ()=> fetch(`http://localhost:5000/articles`)
+        },
+        {
+            path: '/details/:id',
+            element: <Details></Details>,
+            loader: ({params}) => fetch(`http://localhost:5000/articles/${params.id}`)
         },
         {
             path: '/dashboard',
@@ -43,7 +50,8 @@ export const router = createBrowserRouter([
         },
         {
             path: '/my-profile',
-            element: <MyProfile></MyProfile>
+            element: <MyProfile></MyProfile>,
+            loader: ()=> fetch(`http://localhost:5000/articles`)
         }
       ],
       errorElement: <Error></Error>

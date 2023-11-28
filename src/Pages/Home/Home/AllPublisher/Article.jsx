@@ -1,7 +1,7 @@
 
 
 const Article = ({article}) => {
-    console.log(article)
+    // console.log(article)
     const {author, publisher, title, tags, description, image} = article;
     return (
         <section className="mb-8">

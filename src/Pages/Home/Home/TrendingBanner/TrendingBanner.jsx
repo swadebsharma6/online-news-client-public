@@ -25,7 +25,7 @@ const TrendingBanner = () => {
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         {
             trendingArticles.map(article => <SwiperSlide key={article._id}>
-                    <div className=" border px-10" >
+                    <div>
                         <div>
                         <div>
                         <h2 className="text-3xl font-bold">{article.title}</h2>

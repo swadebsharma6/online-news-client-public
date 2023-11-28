@@ -28,7 +28,7 @@ const AllPublisher = () => {
         <section>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         
-         <div className="md:col-span-3 border">
+         <div className="md:col-span-3">
            <div>
              <ArticleComponent items={todaysBd} title='Todays Bd'></ArticleComponent>
              <div className="divider"></div>

@@ -3,7 +3,7 @@ import img2 from '../../../../assets/images/qZone3.png';
 
 const RightSide = () => {
     return (
-        <div className='bg-purple-400'>
+        <div className='bg-purple-400 rounded-xl'>
         <div className="space-y-4 mb-5 border p-3 rounded">
         <h3 className="text-2xl font-bold">Q Zone </h3>
          <img src={img1} alt="" />

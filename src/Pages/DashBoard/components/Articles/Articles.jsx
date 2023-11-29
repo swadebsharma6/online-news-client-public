@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt } from "react-icons/fa";
 import { FcApprove } from "react-icons/fc";
+import { MdWorkspacePremium } from "react-icons/md";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 
@@ -19,6 +20,23 @@ const Articles = () => {
 
    console.log(articles)
    
+   const handleMakePremium = article =>{
+    axiosSecure.patch(`/articles/premium/${article._id}`)
+    .then(res =>{
+      console.log(res.data);
+      if(res.data.modifiedCount > 0){
+        refetch();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Article is premium",
+          showConfirmButton: false,
+          timer: 2500
+        });
+      }
+    })
+}
+
    const handleApproved = article =>{
     axiosSecure.patch(`/articles/approved/${article._id}`)
     .then(res =>{
@@ -127,7 +145,12 @@ const Articles = () => {
               </button>
             </th>
             <th>
-              <button className="btn btn-ghost btn-xs">premium</button>
+             {
+              article.role === 'premium' ? <span>Pre.confirmed</span>  : 
+               <button onClick={()=>handleMakePremium(article)} className="btn btn-primary btn-sm">
+               <MdWorkspacePremium className="text-xl text-secondary"/>
+             </button>
+            }
             </th>
           </tr> )
     }

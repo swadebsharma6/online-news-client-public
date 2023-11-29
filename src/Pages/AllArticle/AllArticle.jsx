@@ -9,6 +9,7 @@ import RightSide from "./RightSide";
 const AllArticle = () => {
   const articles = useLoaderData();
   // console.log(articles);
+  const approvedArticle = articles.filter(item => item.role === 'approve')
 
   return (
     <section>
@@ -22,7 +23,7 @@ const AllArticle = () => {
      </div>
      <div className="md:col-span-2 ">
        <div>
-        {articles.map(news => <NewsCard
+        {approvedArticle.map(news => <NewsCard
             key={news._id}
             news={news}
             ></NewsCard>)}

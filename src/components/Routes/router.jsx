@@ -69,6 +69,7 @@ export const router = createBrowserRouter([
                 path: 'dashboard',
                 element: <DashBoardPage></DashBoardPage>
             },
+            // admin routes
             {
                 path: 'allUsers',
                 element: <AllUsers></AllUsers>

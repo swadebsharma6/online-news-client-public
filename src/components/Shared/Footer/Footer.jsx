@@ -1,48 +1,50 @@
+import logo from '../../../assets/contact/one.png';
+
 const Footer = () => {
   return (
-    <section className="mb-6">
-      <div className="footer p-10 bg-base-200 text-base-content">
-        <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Legal</header>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
-        </nav>
-        <form>
-          <header className="footer-title">Newsletter</header>
-          <fieldset className="form-control w-80">
-            <label className="label">
-              <span className="label-text">Enter your email address</span>
-            </label>
-            <div className="join">
-              <input
-                type="text"
-                placeholder="username@site.com"
-                className="input input-bordered join-item"
-              />
-              <button className="btn btn-primary join-item">Subscribe</button>
-            </div>
-          </fieldset>
-        </form>
-        
-      </div>
-      <div className="footer footer-center p-4 bg-base-300 text-base-content">
+    <section className="mb-2">
+    <footer className="footer grid-rows-2 p-10 bg-neutral rounded-t-xl text-neutral-content">
+   <div>
+    <img className='w-60 h-60 rounded-full' src={logo} alt="" />
+   </div>
+    <nav>
+      <header className="footer-title">Company</header> 
+      <a className="link link-hover">About us</a>
+      <a className="link link-hover">Contact</a>
+      <a className="link link-hover">Jobs</a>
+      <a className="link link-hover">Press kit</a>
+    </nav> 
+    <nav>
+      <header className="footer-title">Legal</header> 
+      <a className="link link-hover">Terms of use</a>
+      <a className="link link-hover">Privacy policy</a>
+      <a className="link link-hover">Cookie policy</a>
+    </nav> 
+    <nav>
+      <header className="footer-title">Social</header> 
+      <a className="link link-hover">Twitter</a>
+      <a className="link link-hover">Instagram</a>
+      <a className="link link-hover">Facebook</a>
+      <a className="link link-hover">Github</a>
+    </nav> 
+    <nav>
+      <header className="footer-title">Explore</header> 
+      <a className="link link-hover">Features</a>
+      <a className="link link-hover">Enterprise</a>
+      <a className="link link-hover">Security</a>
+      <a className="link link-hover">Pricing</a>
+    </nav> 
+    <nav>
+      <header className="footer-title">Apps</header> 
+      <a className="link link-hover">Mac</a>
+      <a className="link link-hover">Windows</a>
+      <a className="link link-hover">iPhone</a>
+      <a className="link link-hover">Android</a>
+    </nav>
+  </footer>
+      <div className="footer footer-center p-4 bg-primary text-base-content text-white">
           <aside>
-            <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+            <p>Copyright © 2023 - All right reserved by One!1 NEWS Ltd</p>
           </aside>
         </div>
     </section>

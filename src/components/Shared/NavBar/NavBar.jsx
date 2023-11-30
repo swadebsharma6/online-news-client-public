@@ -48,14 +48,9 @@ const NavBar = () => {
         >
         Add Article
         </NavLink></li>
-        <li>
-        <NavLink
-          to="/subscription"
-          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
-          }
-        >
-         Subscription
-        </NavLink></li>
+
+        {/*DashBoard*/}
+       
        {
         user &&  <li>
         <NavLink

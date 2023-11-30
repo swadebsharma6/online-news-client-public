@@ -4,7 +4,7 @@ import Article from "./Article";
 const ArticleComponent = ({items, title}) => {
     return (
        <section>
-       <h2 className="text-xl font-semibold text-primary">{title}</h2>
+       <div className="divider divider-neutral text-4xl font-semibold text-primary">{title}</div>
        <div>
        {
            items.map(article => <Article

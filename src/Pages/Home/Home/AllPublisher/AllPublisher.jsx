@@ -18,7 +18,6 @@ const AllPublisher = () => {
     }, []);
 
     const todaysBd = articles.filter(item => item.tags === 'todayBD');
-    const economy = articles.filter(item => item.tags === 'economy');
     const world = articles.filter(item => item.tags === 'world');
     const lifestyle = articles.filter(item => item.tags === 'lifestyle');
     
@@ -30,16 +29,15 @@ const AllPublisher = () => {
         
          <div className="md:col-span-3">
            <div>
-             <ArticleComponent items={todaysBd} title='Todays Bd'></ArticleComponent>
-             <div className="divider"></div>
             <ArticleComponent items={world} title='World News'></ArticleComponent>
             <div className="divider"></div>
-            <ArticleComponent items={economy} title='World Economy'></ArticleComponent>
+             <ArticleComponent items={todaysBd} title='Todays Bd'></ArticleComponent>
+             <div className="divider"></div>
             <div className="divider"></div>
             <ArticleComponent items={lifestyle} title='Lifestyle'></ArticleComponent>
            </div>
          </div>
-         <div className=" max-h-screen">
+         <div className="md:col-span-1">
                 <RightSide></RightSide>
          </div>
             </div>

@@ -1,4 +1,5 @@
 import moment from "moment/moment";
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -10,7 +11,7 @@ const Header = () => {
 
             <div className="md:flex items-center">
                 <h5 className="text-lg font-bold "><p>{moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}</p></h5>
-                <button className="btn btn-outline bg-orange-600 ml-14 text-white">Subscription</button>
+                <Link to='/subscribe'><button className="btn btn-outline bg-orange-600 ml-14 text-white">Subscription</button></Link>
             </div>
         </div>
     </div>

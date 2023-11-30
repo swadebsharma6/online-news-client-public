@@ -30,13 +30,8 @@ const TrendingBanner = () => {
                         <div>
                         <h2 className="text-3xl font-bold">{article.title}</h2>
                         <h4 className="text-xl text-primary py-2">{article.publisher}</h4>
-                        </div>
-                       
-                      <img className="md:h-[800px] w-full bg-cover mb-6" src={article.image} alt="" />
-                          <p className="text-xl font-bold mb-4">{article.tags}</p>
-                        <p className="font-bold text-base">{article.description}...... <span className="text-primary">read more</span> </p>
-                       
-
+                        </div> 
+                      <img className="md:h-[600px] w-full bg-cover mb-6 rounded-b-xl" src={article.image} alt="" />
                         </div>
                     </div>
                 </SwiperSlide>)

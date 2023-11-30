@@ -1,0 +1,38 @@
+[
+  {
+    "type": "Free Plan",
+    "description": "Basic plan with ad-supported streaming and limited features.",
+    "features": [
+      "Ad-supported streaming",
+      "Limited skips",
+      "Basic sound quality",
+      "No offline listening"
+    ],
+    "price": 0
+  },
+  {
+    "type": "Premium Duo",
+    "description": "Ideal for two users providing an ad-free experience with enhanced features.",
+    "features": [
+      "Ad-free experience for two accounts",
+      "Enhanced sound quality",
+      "Unlimited skips",
+      "Offline listening",
+      "Duo Mix feature for shared playlists"
+    ],
+    "price": 12.99
+  },
+  {
+    "type": "Premium Family",
+    "description": "Perfect for families with multiple accounts offering a premium experience and controls.",
+    "features": [
+      "Ad-free experience for multiple accounts (up to six)",
+      "Enhanced sound quality",
+      "Unlimited skips",
+      "Offline listening",
+      "Family Mix feature for shared playlists",
+      "Parental controls"
+    ],
+    "price": 14.99
+  }
+]

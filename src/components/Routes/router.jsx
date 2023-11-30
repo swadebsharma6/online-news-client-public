@@ -11,7 +11,9 @@ import AddPublisher from "../../Pages/DashBoard/components/Publisher/AddPublishe
 import DashBoardPage from "../../Pages/DashBoardPage/DashBoardPage";
 import Error from "../../Pages/ErrorPage/Error";
 import Home from "../../Pages/Home/Home/Home/Home";
+import Payment from "../../Pages/Home/Home/Plans/Payment";
 import MyProfile from "../../Pages/MyProfile/MyProfile";
+import Subscribe from "../../Pages/Subscribe/Subscribe";
 import LogIn from "../SignUpPage/LogIn";
 import Register from "../SignUpPage/Register";
 import PrivetRoute from "./PrivetRoute";
@@ -52,6 +54,15 @@ export const router = createBrowserRouter([
         {
             path: '/contact',
             element: <Contact></Contact>
+        },
+        {
+            path: '/payment/:id',
+            element: <Payment></Payment>,
+            loader: ({params})=> fetch(`http://localhost:5000/plans/${params.id}`)
+        },
+        {
+            path: '/subscribe',
+            element: <Subscribe></Subscribe>
         },
         {
             path: '/my-profile',

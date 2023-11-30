@@ -5,7 +5,7 @@ import useView from "../../hooks/useView";
 
 const DashBoardPage = () => {
   const [views] = useView();
-  console.log(views);
+  console.log('views count', views.length);
   const axiosSecure = useAxiosSecure(); 
 
   const {data: articles=[],} = useQuery({

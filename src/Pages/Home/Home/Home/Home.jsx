@@ -13,9 +13,10 @@ const Home = () => {
             <BreakingNews></BreakingNews>
             <TrendingBanner></TrendingBanner>
             <AllPublisher></AllPublisher>
+            <Plans></Plans>
             <Statistic></Statistic>
             <DefaultNews></DefaultNews>
-            <Plans></Plans>
+           
             <Footer></Footer>
         </div>
     );

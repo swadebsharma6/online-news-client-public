@@ -39,12 +39,12 @@ export const router = createBrowserRouter([
         {
             path: '/allArticle',
             element: <AllArticle></AllArticle>,
-            loader: ()=> fetch(`http://localhost:5000/articles`)
+            loader: ()=> fetch(`https://assingment12-server-site-omega.vercel.app/articles`)
         },
         {
             path: '/details/:id',
             element: <Details></Details>,
-            loader: ({params}) => fetch(`http://localhost:5000/articles/${params.id}`)
+            loader: ({params}) => fetch(`https://assingment12-server-site-omega.vercel.app/articles/${params.id}`)
         },
         {
             path: '/register',
@@ -69,7 +69,7 @@ export const router = createBrowserRouter([
         {
             path: '/payment/:id',
             element: <Payment></Payment>,
-            loader: ({params})=> fetch(`http://localhost:5000/plans/${params.id}`)
+            loader: ({params})=> fetch(`https://assingment12-server-site-omega.vercel.app/plans/${params.id}`)
         },
         {
             path: '/subscribe',

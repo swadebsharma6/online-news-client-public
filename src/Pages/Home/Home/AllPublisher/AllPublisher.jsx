@@ -9,7 +9,7 @@ const AllPublisher = () => {
     // console.log(articles)
     
     useEffect(()=>{
-        const url= `http://localhost:5000/articles`;
+        const url= `https://assingment12-server-site-omega.vercel.app/articles`;
         fetch(url)
         .then(res =>res.json())
         .then(data =>{

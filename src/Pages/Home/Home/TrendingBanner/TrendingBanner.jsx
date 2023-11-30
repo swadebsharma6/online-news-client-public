@@ -9,7 +9,7 @@ const TrendingBanner = () => {
     const [trendingArticles, setTrendingArticles] = useState([]);
 
     useEffect(()=>{
-    const url = `http://localhost:5000/trending`;
+    const url = `https://assingment12-server-site-omega.vercel.app/trending`;
     fetch(url)
     .then(res => res.json())
     .then(data =>{

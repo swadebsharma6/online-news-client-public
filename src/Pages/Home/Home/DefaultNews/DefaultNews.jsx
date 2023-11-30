@@ -6,7 +6,7 @@ const DefaultNews = () => {
     const [news, setNews] = useState([]);
    
     useEffect(()=>{
-        const url = `http://localhost:5000/demo`;
+        const url = `https://assingment12-server-site-omega.vercel.app/demo`;
 
         fetch(url)
         .then(res => res.json())

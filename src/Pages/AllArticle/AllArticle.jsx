@@ -4,7 +4,6 @@ import Footer from "../../components/Shared/Footer/Footer";
 import BreakingNews from "../../components/Shared/NavBar/BreakingNews";
 import LeftSide from "./LeftSide";
 import NewsCard from "./NewsCard";
-import RightSide from "./RightSide";
 
 const AllArticle = () => {
   const articles = useLoaderData();
@@ -30,7 +29,7 @@ const AllArticle = () => {
        </div>
      </div>
      <div className="">
-        <RightSide></RightSide>
+        <LeftSide></LeftSide>
      </div>
         </div>
         <Footer></Footer>

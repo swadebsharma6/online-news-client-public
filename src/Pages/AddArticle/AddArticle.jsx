@@ -1,4 +1,5 @@
 // import newsImg from '../../assets/images/Banner/printer.jpg';
+import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
 import Title from '../../components/Shared/SectionTitle/Title';
@@ -57,6 +58,9 @@ const AddArticle = () => {
 
     return (
         <section>
+        <Helmet>
+        <title>ONE News |Add Article</title>
+      </Helmet>
            <Title subHeading='Add A Article' heading='Provide News By Publisher'></Title>
            <div className='max-w-4xl mx-auto'>
            <form  onSubmit={handleSubmit(onSubmit)}  className="card-body">

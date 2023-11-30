@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "../../../../components/Shared/Footer/Footer";
 import BreakingNews from "../../../../components/Shared/NavBar/BreakingNews";
 import AllPublisher from "../AllPublisher/AllPublisher";
@@ -10,6 +11,9 @@ import TrendingBanner from "../TrendingBanner/TrendingBanner";
 const Home = () => {
     return (
         <div className="">
+        <Helmet>
+        <title>ONE News | Home</title>
+       </Helmet>
             <BreakingNews></BreakingNews>
             <TrendingBanner></TrendingBanner>
             <AllPublisher></AllPublisher>

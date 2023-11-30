@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { FaTrashAlt } from "react-icons/fa";
 import { FcApprove } from "react-icons/fc";
 import { MdWorkspacePremium } from "react-icons/md";
@@ -56,6 +57,9 @@ const MyArticle = () => {
 
     return (
         <section>
+        <Helmet>
+        <title>ONE News | My Article</title>
+      </Helmet>
             <h2 className="text-5xl font-bold text-primary my-10">My Article : {myArticle.length}</h2>
 
             <div>

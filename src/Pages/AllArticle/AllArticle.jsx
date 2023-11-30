@@ -14,7 +14,7 @@ const AllArticle = () => {
   return (
     <section>
     <Helmet>
-        <title>BD NEWS | All Article</title>
+        <title>ONE News | All Article</title>
       </Helmet>
     <BreakingNews></BreakingNews>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

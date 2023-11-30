@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import PremCard from "./PremCard";
 
@@ -23,6 +24,9 @@ const PremiumArticle = () => {
 
     return (
         <section>
+        <Helmet>
+        <title>ONE News | All Article</title>
+      </Helmet>
 
         <h3 className="text-6xl my-5 font-bold text-center">Premium Article</h3>
 

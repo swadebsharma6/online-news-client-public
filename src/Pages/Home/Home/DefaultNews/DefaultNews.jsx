@@ -20,7 +20,6 @@ const DefaultNews = () => {
  const world = news.filter(item => item.category === 'world');
  const lifestyle = news.filter(item => item.category === 'lifestyle');
  const education = news.filter(item => item.category === 'education');
-//  console.log(world)
 
     return (
         <section>

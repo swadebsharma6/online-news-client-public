@@ -12,10 +12,13 @@ import DashBoardPage from "../../Pages/DashBoardPage/DashBoardPage";
 import Error from "../../Pages/ErrorPage/Error";
 import Home from "../../Pages/Home/Home/Home/Home";
 import Payment from "../../Pages/Home/Home/Plans/Payment";
+import MyArticle from "../../Pages/MyArticle/MyArticle";
 import MyProfile from "../../Pages/MyProfile/MyProfile";
+import PremiumArticle from "../../Pages/PremiumArticle/PremiumArticle";
 import Subscribe from "../../Pages/Subscribe/Subscribe";
 import LogIn from "../SignUpPage/LogIn";
 import Register from "../SignUpPage/Register";
+import AdminRoute from "./AdminRoute";
 import PrivetRoute from "./PrivetRoute";
 
 
@@ -31,7 +34,7 @@ export const router = createBrowserRouter([
         },
         {
             path: '/addArticle',
-            element: <AddArticle></AddArticle>
+            element: <PrivetRoute><AddArticle></AddArticle></PrivetRoute>
         },
         {
             path: '/allArticle',
@@ -56,6 +59,14 @@ export const router = createBrowserRouter([
             element: <Contact></Contact>
         },
         {
+            path: '/my-article',
+            element: <PrivetRoute><MyArticle></MyArticle></PrivetRoute>
+        },
+        {
+            path: '/premiumArticle',
+            element: <PrivetRoute><PremiumArticle></PremiumArticle></PrivetRoute>
+        },
+        {
             path: '/payment/:id',
             element: <Payment></Payment>,
             loader: ({params})=> fetch(`http://localhost:5000/plans/${params.id}`)
@@ -67,7 +78,7 @@ export const router = createBrowserRouter([
         {
             path: '/my-profile',
             element: <MyProfile></MyProfile>,
-            loader: ()=> fetch(`http://localhost:5000/articles`)
+            
         }
       ],
       errorElement: <Error></Error>
@@ -78,22 +89,23 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: 'dashboard',
-                element: <DashBoardPage></DashBoardPage>
+                element: <AdminRoute><DashBoardPage></DashBoardPage></AdminRoute>
             },
     
             // admin routes
             {
                 path: 'allUsers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
             },
             {
                 path: 'articles',
-                element: <Articles></Articles>
+                element: <AdminRoute><Articles></Articles></AdminRoute>
             },
             {
                 path: 'publisher',
-                element: <AddPublisher></AddPublisher>
+                element: <AdminRoute><AddPublisher></AddPublisher></AdminRoute>
             }
-        ]
+        ],
+        errorElement: <Error></Error>
     },
   ]);

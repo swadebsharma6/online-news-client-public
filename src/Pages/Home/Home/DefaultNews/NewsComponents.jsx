@@ -5,7 +5,7 @@ const NewsComponents = ({items, category}) => {
 
     return (
         <section className="mb-8">
-         <div className="divider divider-primary text-4xl font-bold mb-5 text-center">{category}</div>
+         <div className="divider divider-primary text-4xl font-bold  text-center">{category}</div>
            <div className="md:grid grid-cols-3 gap-6 my-5">
            {
             items.map(news => <News

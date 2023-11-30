@@ -15,7 +15,7 @@ const Plans = () => {
 
  });
 
- console.log(plans)
+//  console.log(plans)
 
 
 

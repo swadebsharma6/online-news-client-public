@@ -1,11 +1,11 @@
-import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
-import { AuthContext } from "../../../Provider/AuthProvider/AuthProvider";
+import useAuth from "../../../hooks/useAuth";
 
 
 const NavBar = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user, logOut} = useAuth();
+   
 
     const handleLogOut =()=>{
         logOut()
@@ -48,22 +48,9 @@ const NavBar = () => {
         >
         Add Article
         </NavLink></li>
-
-        {/*DashBoard*/}
-       
-       {
-        user &&  <li>
-        <NavLink
-          to="/dashboard"
-          className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
-          }
-        >
-         DashBoard
-        </NavLink></li>
-       }
         <li>
         <NavLink
-          to="/myArticle"
+          to="/my-article"
           className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
           }
         >
@@ -77,6 +64,16 @@ const NavBar = () => {
         >
          Premium Article
         </NavLink></li>
+        
+        {/*DashBoard*/}
+        { user && <li>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) => isActive ? "font-bold text-orange-700" : ""
+            }
+          >
+           DashBoard
+          </NavLink></li>}
     
     </>
 

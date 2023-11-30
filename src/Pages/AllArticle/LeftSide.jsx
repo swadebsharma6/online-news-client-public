@@ -18,7 +18,7 @@ const LeftSide = () => {
     return (
         <section>
            <div>
-            {trendingArticles.map(news => <Card
+            {trendingArticles.slice(0,4).map(news => <Card
                 key={news._id}
                 news={news}
                 ></Card>)}

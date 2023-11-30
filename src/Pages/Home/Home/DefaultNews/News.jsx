@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const News = ({news}) => {
@@ -15,7 +16,7 @@ const News = ({news}) => {
           <h4>{date}</h4>
           <p>{summary}</p>
           <div className="card-actions">
-            <p>{details.slice(0, 100)}....<span className="text-primary">read more</span> </p>
+            <p>{details.slice(0, 100)}....<Link className="text-primary btn-link">read more</Link> </p>
           </div>
         </div>
       </div>

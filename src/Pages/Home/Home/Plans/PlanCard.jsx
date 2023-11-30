@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const PlanCard = ({plan}) => {
 
     const {_id,type, price,} = plan;
-    console.log(plan)
+    // console.log(plan)
     
     return (
         <div>
